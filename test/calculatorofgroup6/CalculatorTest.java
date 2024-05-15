@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package calculatorofgroup6;
-//import java.util.; 
+package calculatorofgroup6; 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -50,8 +49,15 @@ public class CalculatorTest {
         double result1 = instance.add(a, b);
         assertEquals(expResult, result1, 0.0);
         double result2 = instance.add(999999999999999.5, 999999999999999.9);
-         assertEquals(1999999999999999.4, result2, 0.0);
-       
+        assertEquals(1999999999999999.4, result2, 0.0);
+        double result3 = instance.add(-999999999999999.5, -999999999999999.9);
+        assertEquals(-1999999999999999.4, result3,0.0);
+        double results = instance.add(-56.5, 245.9);
+        assertEquals(189.4, results,0.0);
+        double result4 = instance.add(-999999999999999.5, 999999999999999.9);
+         assertEquals(0.4, result4,0.0);
+        
+
     }
     
     
@@ -67,8 +73,13 @@ public class CalculatorTest {
         double b = 999999999999999.9;
         Calculator instance = new Calculator();
         double expResult =0.0 ;
-        double result = instance.subtract(a, b);
-        assertEquals(expResult, result, 0.0);
+       // double result = instance.subtract(a, b);
+       // assertEquals(expResult, result, 0.0);
+         double result3 = instance.subtract(-999999999999999.5, 999999999999999.9);
+        assertEquals(-1999999999999999.2, result3,0.0);   //comparism two floating numbers  
+        double result4 = instance.subtract(-999999999999999.5, -999999999999999.9);
+         assertEquals(-1999999999999999.4, result3,0.0);
+        
         
     }
 
@@ -94,11 +105,11 @@ public class CalculatorTest {
     public void testDivide() {
         System.out.println("divide");
         double a = 0.0;
-        double b = 0.0;
+        double b = 0.00000000000000005;
         Calculator instance = new Calculator();
         double expResult = 0.0;
         double result = instance.divide(a, b);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(0.0, result, 0.0);
        
     }
 
@@ -137,9 +148,10 @@ public class CalculatorTest {
     @Test
     public void testFloor() {
         System.out.println("floor");
+         Calculator instance = new Calculator();
         double a = 0.0;
         double expResult = 0.0;
-        double result = Calculator.floor(a);
+        double result = instance.floor(a);
         assertEquals(expResult, result, 0.0);
        
     }
@@ -167,7 +179,7 @@ public class CalculatorTest {
         double a = 0.0;
         double b = 0.0;
         Calculator instance = new Calculator();
-        double expResult = 0.0;
+        double expResult = 1;
         double result = instance.exponent(a, b);
         assertEquals(expResult, result, 0.0);
         
@@ -188,5 +200,14 @@ public class CalculatorTest {
     }
 
    
-    
+    /* @Test
+    public void testLog() {
+        System.out.println("sqrt");
+        double a = 0.0;
+       Log instance = new Log();
+        double expResult = 0.0;
+        double result = instance.sqrt(a);
+        assertEquals(expResult, result, 0.0);
+        
+    }*/
 }

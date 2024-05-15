@@ -25,16 +25,18 @@ public class Calculator {
     }
 
     public  double divide(double a, double b) {
-        if (b == 0) {
-            throw new IllegalArgumentException("Cannot divide by zero.");
+        if (b==0) {
+            throw new IllegalArgumentException("Can't divided by zero .");
         }
         return a / b;
     }
 
     public  double remainder(double a, double b) {
-        if (b == 0) {
-            throw new IllegalArgumentException("Cannot divide by zero.");
+        if (b != (int)b && a!=(int)a) {
+            throw new IllegalArgumentException("nop! this operator only works with integers.");
         }
+       a=(int)a;//type casting since modules only works with intgers
+       b=(int)b;
         return a % b;
     }
 
@@ -42,7 +44,7 @@ public class Calculator {
         return Math.abs(a);
     }
 
-    public static double floor(double a) {
+    public  double floor(double a) {
         return Math.floor(a);
     }
 
