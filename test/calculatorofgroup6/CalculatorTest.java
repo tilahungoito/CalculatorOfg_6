@@ -95,6 +95,11 @@ public class CalculatorTest {
         double expResult = 0.0;
         double result = instance.multiply(a, b);
         assertEquals(expResult, result, 0.0);
+        double result4 = instance.multiply(-1000000000000.0, -1000000000000.0);
+        assertEquals(1E24, result4, 0.0);
+         double result5 = instance.multiply(1000000000000.0, 1000000000000.0);
+        assertEquals(1E24, result5, 0.0);
+       
        
     }
 
