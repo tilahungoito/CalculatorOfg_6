@@ -62,6 +62,46 @@ public class Calculator {
         }
         return Math.sqrt(a);
     }
+    
+    
+    public double logarithm(double value) {
+        return Math.log10(value);
+    }
+
+
+    
+    public double naturalLogarithm(double value) {
+        return Math.log(value);
+       }
+    
+    
+     
+    
+        public static double inverseSin(double value) {
+            return Math.asin(value);
+        }
+    
+        public static double inverseCos(double value) {
+            return Math.acos(value);
+        }
+    
+        public static double inverseTan(double value) {
+            return Math.atan(value);
+        }
+    
+        public static double inverseSec(double value) {
+            return 1 / Math.acos(value);
+        }
+    
+        public static double inverseCot(double value) {
+            return 1 / Math.atan(value);
+        }
+        public static double inverseCsc(double value) {
+            return 1 / Math.asin(value);
+        }
+ 
+        
+    
 
     public static void main(String[] args) {
         Calculator calculator=new Calculator();
