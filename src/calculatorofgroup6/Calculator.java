@@ -9,7 +9,9 @@ package calculatorofgroup6;
  *
  * @author HP
  */
+import java.util.*;
 import java.util.Scanner;
+
 
 public class Calculator {
     public  double add(double a, double b) {
