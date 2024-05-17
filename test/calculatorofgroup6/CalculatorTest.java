@@ -211,6 +211,9 @@ public class CalculatorTest {
         
     }*/
     
+    /**
+     * Test of Logarithm method, of class Calculator.
+     */
       
     @Test
     public void testLogarithm() {
@@ -218,21 +221,36 @@ public class CalculatorTest {
     }
 
 
+    /**
+     * Test of NaturalLogarithm method, of class Calculator.
+     */
       
     @Test
     public void testNaturalLogarithm() {
         assertEquals(0, sample.naturalLogarithm(1.0));
     }
     
+    /**
+     * Test of InverseSin method, of class Calculator.
+     */
+    
     @Test
     public void testInverseSin() {
         assertEquals(0.707584436725, sample.inverseSin(Math.sin(0.65)), 0.0001);
     }
 
+    /**
+     * Test of InverseCos method, of class Calculator.
+     */
+    
     @Test
     public void testInverseCos() {
         assertEquals(0.86321189007, sample.inverseCos(Math.cos(0.65)), 0.0001);
     }
+
+    /**
+     * Test of InverseTan method, of class Calculator.
+     */
 
     @Test
     public void testInverseTan() {
