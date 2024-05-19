@@ -75,6 +75,9 @@ public class LogTest {
         double expResult = 0.0;
         double result = log.sine(x);
         assertEquals(expResult, result, 0.0);
+         double result1 = log.sine(0.005);
+        assertEquals(0.0000872, result1, 0.0);
+       
        
     }
 
