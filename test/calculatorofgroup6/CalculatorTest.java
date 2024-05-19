@@ -280,4 +280,18 @@ public class CalculatorTest {
         assertEquals(6,sample.calculateFactorial(3));
 
     }  
+
+     
+     @Test
+     public void testDegreesToRadians() {
+               assertEquals(Math.PI / 2, sample.degreesToRadians(90), 0.001);
+               assertEquals(Math.PI, sample.degreesToRadians(180), 0.001);
+     }
+
+     @Test
+     public void testRadiansToDegrees() {
+                    assertEquals(90, sample.radiansToDegrees(Math.PI / 2), 0.001);
+                    assertEquals(180, sample.radiansToDegrees(Math.PI), 0.001);
+     }
+
 }
