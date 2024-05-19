@@ -127,7 +127,18 @@ public class Calculator {
     public static double areaOfSquare(double length){
         double areaS=Math.pow(length,2);
         return areaS;
-    } 
+    }
+
+     
+     public static double degreesToRadians(double degrees) {
+                               
+                    return degrees * Math.PI / 180;
+     }
+                                
+     public static double radiansToDegrees(double radians) {
+                       
+                return radians * 180 / Math.PI;
+     }
  
 
     public static void main(String[] args) {
