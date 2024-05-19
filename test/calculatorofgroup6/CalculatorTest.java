@@ -302,15 +302,12 @@ public class CalculatorTest {
      */
 
     @Test
-    public void testFactorialOfZero() {
+    public void testFactorial() {
         assertEquals(1, sample.calculateFactorial(0));
+        assertEquals(6,sample.calculateFactorial(3));
     }
     
-    @Test
-    public void testFactorialOfThree() {
-        assertEquals(6,sample.calculateFactorial(3));
-
-    }  
+     
 
      /**
      * Test of DegreesToRadians method, of class Calculator.
