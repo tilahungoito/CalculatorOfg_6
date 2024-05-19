@@ -11,11 +11,11 @@
 import java.util.function.DoubleUnaryOperator;
 import java.util.*;
 public class Log {
-    public static double log(double x) {
+    public  double log(double x) {
         return Math.log(x);
     }
 
-    public static double factorial(double x) {
+    public  double factorial(double x) {
         if (x < 0) {
             throw new IllegalArgumentException("Factorial is not defined for negative numbers");
         }
@@ -25,7 +25,7 @@ public class Log {
         return x * factorial(x - 1);
     }
 
-    public static double sine(double x) {
+    public  double sine(double x) {
         return Math.sin(x);
     }
 
@@ -33,12 +33,13 @@ public class Log {
         return Math.cos(x);
     }
 
-    public static double tangent(double x) {
+    public  double tangent(double x) {
         return Math.tan(x);
     }
 
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
+        Log log=new Log();
         double num;
         int choice;
         System.out.println("enter a number");
@@ -56,19 +57,19 @@ public class Log {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Log of "+num+": " + log((int)num));
+                    System.out.println("Log of "+num+": " + log.log((int)num));
                     break;
                 case 2:
-                     System.out.println("Factorial of" +num+": " + factorial(num));
+                     System.out.println("Factorial of" +num+": " + log.factorial(num));
                      break;
                 case 3:
-                    System.out.println("Sine of "+num+" degrees: " + sine(Math.toRadians(num)));
+                    System.out.println("Sine of "+num+" degrees: " + log.sine(Math.toRadians(num)));
                     break;
                 case 4:
-                    System.out.println("Cosine of "+num+" degrees: " + cosine(Math.toRadians(num)));
+                    System.out.println("Cosine of "+num+" degrees: " + log.cosine(Math.toRadians(num)));
                     break;
                 case 5:
-                     System.out.println("Tangent of" +num+" degrees: " + tangent(Math.toRadians(num)));
+                     System.out.println("Tangent of" +num+" degrees: " + log.tangent(Math.toRadians(num)));
                      break;
                   
          }

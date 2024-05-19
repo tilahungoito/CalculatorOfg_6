@@ -64,6 +64,7 @@ public class Calculator {
         }
         return Math.sqrt(a);
     }
+ 
     
     
     public double logarithm(double value) {
@@ -105,6 +106,16 @@ public class Calculator {
         
     
 
+    public static double areaOfRectangle(double width,double height){
+               double areaR=width*height;
+               return areaR;
+    }
+    public static double areaOfSquare(double length){
+        double areaS=Math.pow(length,2);
+        return areaS;
+    } 
+ 
+
     public static void main(String[] args) {
         Calculator calculator=new Calculator();
         Scanner scanner = new Scanner(System.in);
@@ -123,6 +134,8 @@ public class Calculator {
             System.out.println("8. Ceiling");
             System.out.println("9. Exponent");
             System.out.println("10. Square Root");
+            System.out.println("11. area Of Rectangle");
+            System.out.println("12. area Of Square");
             System.out.println("0. Exit");
             System.out.print("Enter your choice (0-10): ");
             choice = scanner.nextInt();
@@ -161,7 +174,7 @@ public class Calculator {
                     num1 = scanner.nextDouble();
                     num2 = scanner.nextDouble();
                     try {
-                        System.out.println("Result: " +calculator. remainder(num1, num2));
+                        System.out.println("Result: " +calculator.remainder(num1, num2));
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
@@ -169,7 +182,7 @@ public class Calculator {
                 case 6:
                     System.out.print("Enter a number: ");
                     num1 = scanner.nextDouble();
-                    System.out.println("Result: " +calculator. absolute(num1));
+                    System.out.println("Result: " +calculator.absolute(num1));
                     break;
                 case 7:
                     System.out.print("Enter a number: ");
@@ -179,7 +192,7 @@ public class Calculator {
                 case 8:
                     System.out.print("Enter a number: ");
                     num1 = scanner.nextDouble();
-                    System.out.println("Result: " +calculator. ceil(num1));
+                    System.out.println("Result: " +calculator.ceil(num1));
                     break;
                 case 9:
                     System.out.print("Enter the base and exponent: ");
@@ -195,6 +208,17 @@ public class Calculator {
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
+                case 11:
+                    System.out.print("Enter the width and height: ");
+                    num1 = scanner.nextDouble();
+                    num2 = scanner.nextDouble();
+                    System.out.println("Result: " + calculator.areaOfRectangle(num1, num2));
+                    break;
+                case 7:
+                    System.out.print("Enter a length: ");
+                    num1 = scanner.nextDouble();
+                    System.out.println("Result: " + calculator.areaOfSquare(num1));
                     break;
                 case 0:
                     System.out.println("Exiting...");
