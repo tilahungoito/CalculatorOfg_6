@@ -9,7 +9,9 @@ package calculatorofgroup6;
  *
  * @author HP
  */
+import java.util.*;
 import java.util.Scanner;
+
 
 public class Calculator {
     public  double add(double a, double b) {
@@ -62,6 +64,48 @@ public class Calculator {
         }
         return Math.sqrt(a);
     }
+ 
+    
+    
+    public double logarithm(double value) {
+        return Math.log10(value);
+    }
+
+
+    
+    public double naturalLogarithm(double value) {
+        return Math.log(value);
+       }
+    
+    
+     
+    
+        public static double inverseSin(double value) {
+            return Math.asin(value);
+        }
+    
+        public static double inverseCos(double value) {
+            return Math.acos(value);
+        }
+    
+        public static double inverseTan(double value) {
+            return Math.atan(value);
+        }
+    
+        public static double inverseSec(double value) {
+            return 1 / Math.acos(value);
+        }
+    
+        public static double inverseCot(double value) {
+            return 1 / Math.atan(value);
+        }
+        public static double inverseCsc(double value) {
+            return 1 / Math.asin(value);
+        }
+ 
+        
+    
+
     public static double areaOfRectangle(double width,double height){
                double areaR=width*height;
                return areaR;
@@ -70,6 +114,7 @@ public class Calculator {
         double areaS=Math.pow(length,2);
         return areaS;
     } 
+ 
 
     public static void main(String[] args) {
         Calculator calculator=new Calculator();
