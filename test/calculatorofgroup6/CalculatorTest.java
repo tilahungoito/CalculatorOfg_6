@@ -281,13 +281,20 @@ public class CalculatorTest {
 
     }  
 
+     /**
+     * Test of DegreesToRadians method, of class Calculator.
+     */
      
      @Test
      public void testDegreesToRadians() {
                assertEquals(Math.PI / 2, sample.degreesToRadians(90), 0.001);
                assertEquals(Math.PI, sample.degreesToRadians(180), 0.001);
      }
-
+     
+     
+     /**
+     * Test of RadiansToDegrees method, of class Calculator.
+     */
      @Test
      public void testRadiansToDegrees() {
                     assertEquals(90, sample.radiansToDegrees(Math.PI / 2), 0.001);
