@@ -265,5 +265,14 @@ public class CalculatorTest {
         assertEquals(0.576375220591, sample.inverseTan(Math.tan(0.65)), 0.0001);
     }
 
-  
+    @Test
+    public void testFactorialOfZero() {
+        assertEquals(1, sample.calculateFactorial(0));
+    }
+    
+    @Test
+    public void testFactorialOfThree() {
+        assertEquals(6,sample.calculateFactorial(3));
+
+    }  
 }

@@ -102,6 +102,20 @@ public class Calculator {
         public static double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
+
+
+        public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        int factorial = 1;
+        for (int i = 2; i <= n; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+
+         
  
         
     
