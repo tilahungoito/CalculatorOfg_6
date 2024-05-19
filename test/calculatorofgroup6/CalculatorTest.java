@@ -207,6 +207,37 @@ public class CalculatorTest {
         
     }
 
+    /**
+     * Test of testAreaOfRectangle method, of class Calculator.
+     */
+    @Test
+       public void testAreaOfRectangle(){
+        System.out.println("Area of Rectangle");
+        double a = 2.0;
+        double b = 3.0;
+        Calculator instance = new Calculator();
+        double expResult = 6.0;
+        double result = instance.AreaOfRectangle(a, b);
+        assertEquals(expResult, result, 6.0);
+        double result4 = instance.AreaOfRectangle(-1000000000000.0, -1000000000000.0);
+        assertEquals(1E24, result4, 0.0);
+         double result5 = instance.AreaOfRectangle(1000000000000.0, 1000000000000.0);
+        assertEquals(1E24, result5, 0.0);
+    }
+    /**
+     * Test of testAreaOfSquare method, of class Calculator.
+     */
+    @Test
+    public void testAreaOfSquare(){
+        System.out.println("Area of Square");
+        double a = 2.0;
+        Calculator instance = new Calculator();
+        double expResult = 4.0;
+        double result = instance.AreaOfSquare(a);
+        assertEquals(expResult, result, 4.0);
+        
+    }
+
    
     /* @Test
     public void testLog() {
