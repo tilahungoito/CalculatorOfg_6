@@ -237,6 +237,16 @@ public class CalculatorTest {
         assertEquals(expResult, result, 4.0);
         
     }
+    @Test
+    public void testConvertToPercentage() {
+        System.out.println("to percentage");
+        double a = 0.0005;
+        Calculator instance = new Calculator();
+        double expResult = 0.05;
+        double result = instance.convertToPercentage(a);
+        assertEquals(expResult, result, 0.05);
+       
+    }
 
    
     /* @Test
