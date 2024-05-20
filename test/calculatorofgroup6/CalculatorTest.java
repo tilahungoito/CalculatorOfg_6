@@ -296,5 +296,37 @@ public class CalculatorTest {
         assertEquals(0.576375220591, sample.inverseTan(Math.tan(0.65)), 0.0001);
     }
 
-  
+     
+    /**
+     * Test of factorial method, of class Calculator.
+     */
+
+    @Test
+    public void testFactorial() {
+        assertEquals(1, sample.calculateFactorial(0));
+        assertEquals(6,sample.calculateFactorial(3));
+    }
+    
+     
+
+     /**
+     * Test of DegreesToRadians method, of class Calculator.
+     */
+     
+     @Test
+     public void testDegreesToRadians() {
+               assertEquals(Math.PI / 2, sample.degreesToRadians(90), 0.001);
+               assertEquals(Math.PI, sample.degreesToRadians(180), 0.001);
+     }
+     
+     
+     /**
+     * Test of RadiansToDegrees method, of class Calculator.
+     */
+     @Test
+     public void testRadiansToDegrees() {
+                    assertEquals(90, sample.radiansToDegrees(Math.PI / 2), 0.001);
+                    assertEquals(180, sample.radiansToDegrees(Math.PI), 0.001);
+     }
+
 }
