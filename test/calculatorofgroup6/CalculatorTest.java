@@ -163,6 +163,13 @@ public class CalculatorTest {
         assertEquals(expResult, result, 0.0);
        
     }
+    
+     @Test
+    public void testFloor() {
+        assertEquals(1, sample.floor(1.5));
+        assertEquals(-2, sample.floor(-1.5));
+        assertEquals(0, sample.floor(0));
+    }
 
     /**
      * Test of ceil method, of class Calculator.
