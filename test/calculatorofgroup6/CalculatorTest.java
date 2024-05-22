@@ -186,10 +186,11 @@ public class CalculatorTest {
     }
     
     @Test
-    public void testFloor() {
+    public void testCeil() {
         assertEquals(2, sample.floor(1.5));
         assertEquals(-1, sample.floor(-1.5));
         assertEquals(0, sample.floor(0));
+        
     }
 
     /**
