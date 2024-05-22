@@ -114,10 +114,12 @@ public class Calculator {
         }
         return factorial;
     }
+    public static String convertToPercentage(double number) {
+        double percentage = number * 100;
+        String percentageString = String.format("%.2f%%", percentage);
 
-         
- 
-        
+        return percentageString;
+    }           
     
 
     public static double areaOfRectangle(double width,double height){
@@ -161,8 +163,9 @@ public class Calculator {
             System.out.println("10. Square Root");
             System.out.println("11. area Of Rectangle");
             System.out.println("12. area Of Square");
+            System.out.println("13. percentage converter");
             System.out.println("0. Exit");
-            System.out.print("Enter your choice (0-10): ");
+            System.out.print("Enter your choice (0-13): ");
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -240,10 +243,15 @@ public class Calculator {
                     num2 = scanner.nextDouble();
                     System.out.println("Result: " + calculator.areaOfRectangle(num1, num2));
                     break;
-                case 7:
+                case 12:
                     System.out.print("Enter a length: ");
                     num1 = scanner.nextDouble();
                     System.out.println("Result: " + calculator.areaOfSquare(num1));
+                    break;
+                case 13:
+                    System.out.print("Enter a number to be converted: ");
+                    num1 = scanner.nextDouble();
+                    System.out.println("Result: " +calculator.convertToPercentage(num1));
                     break;
                 case 0:
                     System.out.println("Exiting...");
