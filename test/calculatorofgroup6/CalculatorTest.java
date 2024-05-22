@@ -207,6 +207,47 @@ public class CalculatorTest {
         
     }
 
+    /**
+     * Test of testAreaOfRectangle method, of class Calculator.
+     */
+    @Test
+       public void testAreaOfRectangle(){
+        System.out.println("Area of Rectangle");
+        double a = 2.0;
+        double b = 3.0;
+        Calculator instance = new Calculator();
+        double expResult = 6.0;
+        double result = instance.AreaOfRectangle(a, b);
+        assertEquals(expResult, result, 6.0);
+        double result4 = instance.AreaOfRectangle(-1000000000000.0, -1000000000000.0);
+        assertEquals(1E24, result4, 0.0);
+         double result5 = instance.AreaOfRectangle(1000000000000.0, 1000000000000.0);
+        assertEquals(1E24, result5, 0.0);
+    }
+    /**
+     * Test of testAreaOfSquare method, of class Calculator.
+     */
+    @Test
+    public void testAreaOfSquare(){
+        System.out.println("Area of Square");
+        double a = 2.0;
+        Calculator instance = new Calculator();
+        double expResult = 4.0;
+        double result = instance.AreaOfSquare(a);
+        assertEquals(expResult, result, 4.0);
+        
+    }
+    @Test
+    public void testConvertToPercentage() {
+        System.out.println("to percentage");
+        double a = 0.0005;
+        Calculator instance = new Calculator();
+        double expResult = 0.05;
+        double result = instance.convertToPercentage(a);
+        assertEquals(expResult, result, 0.05);
+       
+    }
+
    
     /* @Test
     public void testLog() {
@@ -271,15 +312,12 @@ public class CalculatorTest {
      */
 
     @Test
-    public void testFactorialOfZero() {
+    public void testFactorial() {
         assertEquals(1, sample.calculateFactorial(0));
+        assertEquals(6,sample.calculateFactorial(3));
     }
     
-    @Test
-    public void testFactorialOfThree() {
-        assertEquals(6,sample.calculateFactorial(3));
-
-    }  
+     
 
      /**
      * Test of DegreesToRadians method, of class Calculator.
