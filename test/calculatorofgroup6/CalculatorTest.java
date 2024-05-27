@@ -163,6 +163,13 @@ public class CalculatorTest {
         assertEquals(expResult, result, 0.0);
        
     }
+    
+     @Test
+    public void testFloor() {
+        assertEquals(1, sample.floor(1.5));
+        assertEquals(-2, sample.floor(-1.5));
+        assertEquals(0, sample.floor(0));
+    }
 
     /**
      * Test of ceil method, of class Calculator.
@@ -175,6 +182,14 @@ public class CalculatorTest {
         double expResult = 0.0;
         double result = instance.ceil(a);
         assertEquals(expResult, result, 0.0);
+        
+    }
+    
+    @Test
+    public void testCeil() {
+        assertEquals(2, sample.floor(1.5));
+        assertEquals(-1, sample.floor(-1.5));
+        assertEquals(0, sample.floor(0));
         
     }
 
@@ -207,6 +222,47 @@ public class CalculatorTest {
         
     }
 
+    /**
+     * Test of testAreaOfRectangle method, of class Calculator.
+     */
+    @Test
+       public void testAreaOfRectangle(){
+        System.out.println("Area of Rectangle");
+        double a = 2.0;
+        double b = 3.0;
+        Calculator instance = new Calculator();
+        double expResult = 6.0;
+        double result = instance.AreaOfRectangle(a, b);
+        assertEquals(expResult, result, 6.0);
+        double result4 = instance.AreaOfRectangle(-1000000000000.0, -1000000000000.0);
+        assertEquals(1E24, result4, 0.0);
+         double result5 = instance.AreaOfRectangle(1000000000000.0, 1000000000000.0);
+        assertEquals(1E24, result5, 0.0);
+    }
+    /**
+     * Test of testAreaOfSquare method, of class Calculator.
+     */
+    @Test
+    public void testAreaOfSquare(){
+        System.out.println("Area of Square");
+        double a = 2.0;
+        Calculator instance = new Calculator();
+        double expResult = 4.0;
+        double result = instance.AreaOfSquare(a);
+        assertEquals(expResult, result, 4.0);
+        
+    }
+    @Test
+    public void testConvertToPercentage() {
+        System.out.println("to percentage");
+        double a = 0.0005;
+        Calculator instance = new Calculator();
+        double expResult = 0.05;
+        double result = instance.convertToPercentage(a);
+        assertEquals(expResult, result, 0.05);
+       
+    }
+
    
     /* @Test
     public void testLog() {
@@ -218,4 +274,84 @@ public class CalculatorTest {
         assertEquals(expResult, result, 0.0);
         
     }*/
+    
+    /**
+     * Test of Logarithm method, of class Calculator.
+     */
+      
+    @Test
+    public void testLogarithm() {
+        assertEquals(3.0, sample.logarithm(1000.0));
+    }
+
+
+    /**
+     * Test of NaturalLogarithm method, of class Calculator.
+     */
+      
+    @Test
+    public void testNaturalLogarithm() {
+        assertEquals(0, sample.naturalLogarithm(1.0));
+    }
+    
+    /**
+     * Test of InverseSin method, of class Calculator.
+     */
+    
+    @Test
+    public void testInverseSin() {
+        assertEquals(0.707584436725, sample.inverseSin(Math.sin(0.65)), 0.0001);
+    }
+
+    /**
+     * Test of InverseCos method, of class Calculator.
+     */
+    
+    @Test
+    public void testInverseCos() {
+        assertEquals(0.86321189007, sample.inverseCos(Math.cos(0.65)), 0.0001);
+    }
+
+    /**
+     * Test of InverseTan method, of class Calculator.
+     */
+
+    @Test
+    public void testInverseTan() {
+        assertEquals(0.576375220591, sample.inverseTan(Math.tan(0.65)), 0.0001);
+    }
+
+     
+    /**
+     * Test of factorial method, of class Calculator.
+     */
+
+    @Test
+    public void testFactorial() {
+        assertEquals(1, sample.calculateFactorial(0));
+        assertEquals(6,sample.calculateFactorial(3));
+    }
+    
+     
+
+     /**
+     * Test of DegreesToRadians method, of class Calculator.
+     */
+     
+     @Test
+     public void testDegreesToRadians() {
+               assertEquals(Math.PI / 2, sample.degreesToRadians(90), 0.001);
+               assertEquals(Math.PI, sample.degreesToRadians(180), 0.001);
+     }
+     
+     
+     /**
+     * Test of RadiansToDegrees method, of class Calculator.
+     */
+     @Test
+     public void testRadiansToDegrees() {
+                    assertEquals(90, sample.radiansToDegrees(Math.PI / 2), 0.001);
+                    assertEquals(180, sample.radiansToDegrees(Math.PI), 0.001);
+     }
+
 }
