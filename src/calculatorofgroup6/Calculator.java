@@ -80,31 +80,31 @@ public class Calculator {
     
      
     
-        public static double inverseSin(double value) {
+        public  double inverseSin(double value) {
             return Math.asin(value);
         }
     
-        public static double inverseCos(double value) {
+        public  double inverseCos(double value) {
             return Math.acos(value);
         }
     
-        public static double inverseTan(double value) {
+        public  double inverseTan(double value) {
             return Math.atan(value);
         }
     
-        public static double inverseSec(double value) {
+        public  double inverseSec(double value) {
             return 1 / Math.acos(value);
         }
     
-        public static double inverseCot(double value) {
+        public  double inverseCot(double value) {
             return 1 / Math.atan(value);
         }
-        public static double inverseCsc(double value) {
+        public  double inverseCsc(double value) {
             return 1 / Math.asin(value);
         }
 
 
-        public static int factorial(int n) {
+        public  int factorial(int n) {
         if (n == 0 || n == 1) {
             return 1;
         }
@@ -114,7 +114,7 @@ public class Calculator {
         }
         return factorial;
     }
-    public static String convertToPercentage(double number) {
+    public  String convertToPercentage(double number) {
         double percentage = number * 100;
         String percentageString = String.format("%.2f%%", percentage);
 
@@ -122,22 +122,22 @@ public class Calculator {
     }           
     
 
-    public static double areaOfRectangle(double width,double height){
+    public  double areaOfRectangle(double width,double height){
                double areaR=width*height;
                return areaR;
     }
-    public static double areaOfSquare(double length){
+    public  double areaOfSquare(double length){
         double areaS=Math.pow(length,2);
         return areaS;
     }
 
      
-     public static double degreesToRadians(double degrees) {
+     public  double degreesToRadians(double degrees) {
                                
                     return degrees * Math.PI / 180;
      }
                                 
-     public static double radiansToDegrees(double radians) {
+     public  double radiansToDegrees(double radians) {
                        
                 return radians * 180 / Math.PI;
      }
