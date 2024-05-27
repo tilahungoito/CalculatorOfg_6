@@ -45,8 +45,11 @@ public class LogTest {
         System.out.println("log");
         double x = 0.0;
         double expResult = 0.0;
+         double result1 = log.log(0.9876897);
+        assertEquals(-0.00537947519, result1, 0.0);
         double result = log.log(x);
         assertEquals(expResult, result, 0.0);
+        
         
     }
 
@@ -98,9 +101,10 @@ public class LogTest {
     @Test
     public void testTangent() {
         System.out.println("tangent");
+        Log log=new Log();
         double x = 0.0;
         double expResult = 0.0;
-        double result = Log.tangent(x);
+        double result = log.tangent(x);
         assertEquals(expResult, result, 0.0);
         
     }
